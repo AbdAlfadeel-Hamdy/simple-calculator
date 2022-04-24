@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #c3fae8, #37b24d);
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+  align-content: center;
+  justify-content: center;
+}
+.display {
+  grid-column: 1/-1;
+  background-color: #087f5b;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+
+  word-break: break-all;
+}
+.display__prev {
+  font-size: 1.5rem;
+  color: rgba(225, 225, 225, 0.8);
+}
+.display__cur {
+  font-size: 2rem;
+}
+.span-2 {
+  grid-column: span 2;
+}
+
+.container > button {
+  background-color: rgba(225, 225, 225, 0.76);
+  border: 1px solid #fff;
+  cursor: pointer;
+  outline: none;
+  color: #087f5b;
+  font-size: 2rem;
+}
+
+.container > button:hover,
+.container > button:active {
+  background-color: rgba(225, 225, 225, 0.95);
+}
